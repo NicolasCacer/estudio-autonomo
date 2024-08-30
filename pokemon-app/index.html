@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon App</title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container bg-red-500">
         <h1>Pokémon Info</h1>
         <input type="text" id="pokemonName" placeholder="Enter Pokémon name">
         <button onclick="fetchPokemon()">Search</button>
-
         <div id="pokemonInfo" class="pokemon-info">
             <h2 id="name"></h2>
             <img id="photo" src="" alt="Pokémon Photo">
             <p id="weight"></p>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
