@@ -6,17 +6,21 @@
     <title>Pokémon App</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="w-screen h-screen bg-blue-200 flex justify-center items-center p-2 m-0">
-    <div class="container bg-yellow-400 h-[350px] w-[200px] rounded-lg shadow-md shadow-black flex flex-col items-center justify-center p-3 overflow-scroll">
-        <h1 class="text-3xl p-3 font-bold">Googlemon</h1>
-        <input class="rounded-md p-1 m-2 w-[90%]" type="text" id="pokemonName" placeholder="Enter Pokemon name">
-        <button class="bg-blue-200 px-3 rounded-lg hover:ring-2" onclick="fetchPokemon()">Search</button>
-        <div id="pokemonInfo" class="pokemon-info flex flex-col justify-center items-center p-3 m-3 bg-blue-200 rounded-lg max-h-[100%]">
-            <h2 id="name" class="font-bold text-2xl"></h2>
-            <img id="photo" src="/pokemon-app/image.png" alt="Pokémon Photo">
-            <p id="weight"></p>
-        </div>
-    </div>
+<body class="bg-blue-500 w-screen h-screen flex flex-col">
+    <header>Encabezado</header>
+    <main class="flex gap-3">
+        <section>
+            <input class="rounded-md p-1 m-2 w-[90%]" type="text" id="pokemonName" placeholder="Enter Pokemon name">
+            <button class="bg-blue-200 px-3 rounded-lg hover:ring-2" onclick="fetchPokemon()">Search</button>
+            <div id="pokemonInfo" class="pokemon-info flex flex-col justify-center items-center p-3 m-3 bg-blue-200 rounded-lg max-h-[100%]">
+                <h2 id="name" class="font-bold text-2xl"></h2>
+                <img id="photo" src="/pokemon-app/image.png" alt="Pokémon Photo">
+                <p id="weight"></p>
+            </div>
+        </section>
+        <aside>aside</aside>
+    </main>
+    <footer>Pie de página</footer>
     <script src="script.js"></script>
 </body>
 </html>
