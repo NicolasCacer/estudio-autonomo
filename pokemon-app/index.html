@@ -5,22 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon App</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"  rel="stylesheet" />
 </head>
-<body class="bg-blue-500 w-screen h-screen flex flex-col">
-    <header>Encabezado</header>
-    <main class="flex gap-3">
-        <section>
+<body class="bg-blue-500 w-[100%] h-screen flex flex-col m-0 p-0">
+    <header class="self-center font-bold text-2xl p-2">Googlemon</header>
+    <main class="flex flex-col items-center">
+        <section class="w-[80%] rounded-lg bg-red-500 flex flex-col justify-center items-center">
             <input class="rounded-md p-1 m-2 w-[90%]" type="text" id="pokemonName" placeholder="Enter Pokemon name">
-            <button class="bg-blue-200 px-3 rounded-lg hover:ring-2" onclick="fetchPokemon()">Search</button>
+            <button class="bg-blue-200 px-3 w-[30%] rounded-lg hover:ring-2" onclick="fetchPokemon()">Search</button>
             <div id="pokemonInfo" class="pokemon-info flex flex-col justify-center items-center p-3 m-3 bg-blue-200 rounded-lg max-h-[100%]">
                 <h2 id="name" class="font-bold text-2xl"></h2>
                 <img id="photo" src="/pokemon-app/image.png" alt="Pokémon Photo">
                 <p id="weight"></p>
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                  <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Profile
+                  </button>
+                  <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Settings
+                  </button>
+                  <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                    Messages
+                  </button>
+                </div>
             </div>
         </section>
-        <aside>aside</aside>
+        <aside class="bg-orange-200 p-2 m-3 w-[80%]">
+            <section class="filters">
+                Filtros:
+                
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+    </button>
+    
+    <!-- Dropdown menu -->
+    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+          </li>
+        </ul>
+    </div>
+    
+            </section>
+        </aside>
     </main>
     <footer>Pie de página</footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>
 </html>
